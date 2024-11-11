@@ -1,0 +1,22 @@
+.comments-container {
+  max-height: 500px; /* Establece una altura máxima para el contenedor */
+  overflow-y: auto; /* Añade una barra de desplazamiento vertical */
+  margin-top: 20px;
+}
+
+/* El resto de tus estilos */
+.comment {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.comment p {
+  margin: 0 0 10px;
+}
+
+.comment small {
+  color: #555;
+}

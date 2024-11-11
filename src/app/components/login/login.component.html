@@ -1,0 +1,44 @@
+<form class="login-form">
+  <!-- Mensaje de Error -->
+  @if (errorMessage) {
+  <div class="error-message">
+    {{ errorMessage }}
+  </div>
+  }
+
+  <label for="username">Nombre:</label>
+  <input
+    [(ngModel)]="username"
+    name="username"
+    required
+    [disabled]="isLoading"
+    placeholder="Ingrese su nombre de usuario"
+  />
+
+  <label for="username">Contraseña:</label>
+  <input
+    [(ngModel)]="contrasena"
+    name="contrasena"
+    type="password"
+    required
+    [disabled]="isLoading"
+    placeholder="Ingrese su contraseña"
+  />
+
+  <!-- Botón de Login -->
+  <button (click)="onLogin()" [disabled]="isLoading" class="login-button">
+    @if (isLoading) {
+    <span class="spinner"></span>
+    } @else { Iniciar Sesión }
+  </button>
+
+  <br />
+  <br />
+
+  <!-- Botón de Registro -->
+  <button (click)="onRegistro()" [disabled]="isLoading" class="register-button">
+    @if (isLoading) {
+    <span class="spinner"></span>
+    } @else { Registrarse }
+  </button>
+</form>
