@@ -36,7 +36,7 @@ export class LoginComponent {
       },
       error: (error) => {
         console.error(error);
-        this.errorMessage = error.error?.mensaje || 'Error al iniciar sesión';
+        this.errorMessage = error.error.error || 'Error al iniciar sesión';
         this.isLoading = false;
       },
       complete: () => {
@@ -58,7 +58,7 @@ export class LoginComponent {
       },
       error: (error) => {
         console.error(error);
-        this.errorMessage = error.error?.mensaje || 'Error al registrarse';
+        this.errorMessage = error.error.error || 'Error al registrarse';
         this.isLoading = false;
       },
     });
